@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "bundle-http": {
+            "name": "bundle-http",
+            "bundle-file": "bundle-http",
+            "prefixes": {
+                "http": {
+                    "consumer": {
+                        "class": "esb.bundles.core.http.HttpConsumer"
+                    },
+                    "producer": {
+                        "class": "esb.bundles.core.http.HttpProducer"
+                    }
+                }
+            }
+        }
+    }
+}
