@@ -75,6 +75,7 @@ class HttpProducer implements IProducer {
         if (portString != null) {
             port = Std.parseInt(portString);
         }
+        log.info('http server listening for incoming messages in port ${port}');
         httpServer.start(port);
     }
 }

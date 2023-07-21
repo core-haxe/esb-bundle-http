@@ -6,10 +6,12 @@
             "prefixes": {
                 "http": {
                     "consumer": {
-                        "class": "esb.bundles.core.http.HttpConsumer"
+                        "class": "esb.bundles.core.http.HttpConsumer",
+                        "uri": "queue://outbound-http-requests"
                     },
                     "producer": {
-                        "class": "esb.bundles.core.http.HttpProducer"
+                        "class": "esb.bundles.core.http.HttpProducer",
+                        "uri": "queue://inbound-http-requests:{port}"
                     }
                 }
             }
