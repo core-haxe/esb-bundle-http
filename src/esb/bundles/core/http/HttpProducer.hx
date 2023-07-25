@@ -69,11 +69,9 @@ class HttpProducer implements IProducer {
             });
         };
 
-        // TODO: do better
         var port:Int = 80;
-        var portString = uri.path.split(":").pop();
-        if (portString != null) {
-            port = Std.parseInt(portString);
+        if (uri.port != null) {
+            port = uri.port;
         }
         log.info('http server listening for incoming messages in port ${port}');
         httpServer.start(port);
