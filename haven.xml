@@ -4,6 +4,9 @@
     <version>0.0.0</version>
 
     <commands>
+        <copy-config>
+            <copy-file source="${baseDir}/bundle-http.json" destination="${configDir}/bundle-http.json" />
+        </copy-config>
         <build>
             <haxe target="js" output="${buildDir}/bundle-http.js" main="esb.core.BundleLoader" cleanUp="false" outputFilename="nodejs.hxml">
                 <dependencies>
@@ -28,8 +31,5 @@
                 </compiler-defines>
             </haxe>
         </build>
-        <install>
-            <copy-file source="${baseDir}/bundle-http.json" destination="${configDir}/bundle-http.json" />
-        </install>
     </commands>
 </project>
